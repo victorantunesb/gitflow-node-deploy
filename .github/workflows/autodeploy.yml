@@ -36,4 +36,5 @@ jobs:
           password: ${{ secrets.DOCKER_PASSWORD }}
 
       - name: Push Docker Image
-        run: docker push victorantunesb/express-node-deploy:1.0.0
+        run: docker tag express-node-deploy victorantunesb/express-node-deploy
+        run: docker push victorantunesb/express-node-deploy
