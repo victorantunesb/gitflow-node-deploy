@@ -37,6 +37,12 @@ jobs:
 
       - name: Tag Docker Image
         run: docker tag express-node-deploy victorantunesb/express-node-deploy
-        
+
       - name: Push Docker Image
         run: docker push victorantunesb/express-node-deploy
+
+      - name: Cleanup
+        if: success()
+        run: |
+          /usr/bin/docker logout
+          echo "Removed login credentials for Docker Hub"
