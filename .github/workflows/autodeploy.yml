@@ -22,7 +22,7 @@ jobs:
         run: npm install
 
       - name: Build Docker Image
-        run: docker build -t victorantunesb/express-node-deploy:1.0.0 .
+        run: docker build -t victorantunesb/express-node-deploy .
 
   push:
     runs-on: ubuntu-latest
