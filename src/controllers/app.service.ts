@@ -1,5 +1,5 @@
 export class AppService {
-  homeRoute(){
-    return `<h1>Hello, World!</h1>`
+  homeRoute() {
+    return `<h1>FW</h1>`;
   }
 }
